@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Samit Saenkham | Medical Technologist</title>
-<meta name="description" content="Medical technologist and laboratory supervisor with 20 years of experience in laboratory quality, malaria programs, training and health data systems for displaced communities in Thailand.">
+<meta name="description" content="Medical technologist and laboratory supervisor with 20 years of experience in laboratory quality, malaria programs, training and health data systems for displaced communities on the Thai–Myanmar border.">
 <meta name="theme-color" content="#0A3B3A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%230A3B3A'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,6 +74,34 @@ h1{margin:0 0 1.25rem;font:500 clamp(2.6rem,1.6rem + 4.4vw,4.5rem)/1.02 var(--se
 .tick-major{stroke:rgba(255,255,255,.85);stroke-width:.9}
 .tick-index{stroke:#DDAEE6;stroke-width:1.8}
 @keyframes tick-in{to{opacity:1}}
+
+/* Icons */
+.ico{width:1.25rem;height:1.25rem;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.tile{flex:none;display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:.625rem;background:var(--mint-100);color:var(--pine-700)}
+.tile .ico{width:1.5rem;height:1.5rem}
+.sec-alt .tile{background:#fff}
+.contact .tile{background:rgba(255,255,255,.12);color:var(--mint-300)}
+h2{display:flex;align-items:center;gap:.8rem}
+.grp h4,.gallery h3,.also h3,.skill-grid h3,.edu h3{display:flex;align-items:center;gap:.5rem}
+.grp h4 .ico{color:var(--role)}
+.gallery h3,.also h3,.skill-grid h3,.edu h3{color:var(--pine-900)}
+.gallery h3 .ico,.also h3 .ico{color:var(--pine-700)}
+.gallery h3 .ico{width:1.6rem;height:1.6rem}
+.skill-grid h3 .ico,.edu h3 .ico{color:var(--pine-700)}
+.tool h3{display:flex;align-items:center;gap:.6rem}
+.tool h3 .ico{width:1.5rem;height:1.5rem;color:var(--pine-700)}
+.tl-title{display:inline-flex;align-items:center;gap:.55rem}
+.tl-title .ico{color:var(--role)}
+.panel-head h3{display:flex;align-items:center;gap:.6rem}
+.panel-head h3 .ico{width:1.6rem;height:1.6rem;color:var(--role)}
+.hero-meta li{display:flex;align-items:flex-start;gap:.55rem}
+.hero-meta .ico{width:1.1rem;height:1.1rem;margin-top:.2em;color:var(--mint-300)}
+
+/* Border-region backdrop: abstract contours and a dotted boundary line */
+.hero,.contact{position:relative;overflow:hidden}
+.hero>.wrap,.contact>.wrap{position:relative;z-index:1}
+.topo{position:absolute;inset:0;width:100%;height:100%;color:rgba(169,214,208,.2);pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent 8%,#000 62%);mask-image:linear-gradient(90deg,transparent 8%,#000 62%)}
+.topo-soft{color:rgba(169,214,208,.12);-webkit-mask-image:linear-gradient(270deg,transparent 5%,#000 70%);mask-image:linear-gradient(270deg,transparent 5%,#000 70%)}
 
 /* Numbers */
 .stats{background:var(--mist);border-bottom:1px solid var(--line)}
@@ -206,7 +234,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
   .tick{animation:none;opacity:1}
 }
 @media print{
-  .nav,.filters,.status,.timeline,.actions,.field,.copy-btn,.zoom{display:none!important}
+  .nav,.filters,.status,.timeline,.actions,.field,.copy-btn,.zoom,.topo{display:none!important}
   .hero,.contact{background:#fff!important;color:#000!important}
   .hero *,.contact *{color:#000!important}
   [role="tabpanel"][hidden]{display:block!important}
@@ -215,6 +243,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-micro" viewBox="0 0 24 24"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol><symbol id="i-pulse" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M12 8v6M9 11h6"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-clipplus" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11v6M9 14h6"/></symbol><symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.7s6 6.3 6 10.8a6 6 0 0 1-12 0C6 9 12 2.7 12 2.7z"/></symbol><symbol id="i-report" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 17v-3M12 17v-6M16 17v-4"/></symbol><symbol id="i-hospital" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M12 9v5M9.5 11.5h5"/><path d="M10 21v-3h4v3"/></symbol><symbol id="i-case" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M12 11v6M9 14h6"/></symbol><symbol id="i-steth" viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol><symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/><path d="M22 10v6"/></symbol><symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M12 6.5v5M9.5 9h5"/><path d="M8.5 14.5 7 22l5-3 5 3-1.5-7.5"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol><symbol id="i-laptop" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></symbol><symbol id="i-tube" viewBox="0 0 24 24"><path d="M14.5 2v17.5a2.5 2.5 0 0 1-5 0V2"/><path d="M8.5 2h7"/><path d="M14.5 16h-5"/></symbol><symbol id="i-clipcheck" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol><symbol id="i-pill" viewBox="0 0 24 24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7z"/><path d="m8.5 8.5 7 7"/></symbol><symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol><symbol id="i-thermo" viewBox="0 0 24 24"><path d="M14 14.8V4a2 2 0 0 0-4 0v10.8a4 4 0 1 0 4 0z"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol></defs></svg>
 
 <nav class="nav" aria-label="Sections">
   <div class="wrap">
@@ -230,19 +259,19 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
 </nav>
 
 <header class="hero on-dark" id="top">
+  <svg class="topo" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><g id="topo"><g fill="none" stroke="currentColor" stroke-width="1" stroke-opacity=".5" stroke-linejoin="round"><path d="M82,0L79,7L78,9L75,14L71,20L70,21L64,28L64,28L57,35L56,36L50,40L44,43L43,44L36,46L28,47L21,44L20,43L17,36L16,28L18,21L20,14L21,12L24,7L28,0L29,0M0,407L3,405L7,402L14,398L14,398L21,396L28,395L36,398L36,398L39,405L39,412L38,420L36,426L35,427L32,434L28,439L27,441L21,448L21,448L14,455L14,455L7,460L4,462L0,465M321,640L327,635L329,633L334,629L339,626L341,624L348,621L354,619L355,618L362,617L368,619L369,619L372,626L372,633L371,640M727,640L717,634L710,631L696,626L689,623L675,620L667,618L653,614L643,612L632,607L625,604L613,597L604,590L596,585L589,579L582,574L575,569L562,562L554,559L540,555L533,553L518,552L504,551L490,552L476,553L462,554L447,554L433,553L424,548L419,537L417,526L417,512L418,498L419,491L421,476L424,462L426,455L431,441L434,434L440,420L444,412L449,405L454,397L462,388L469,380L476,373L483,367L490,362L499,356L510,348L518,344L525,341L540,335L547,333L561,329L575,328L589,329L604,333L611,337L618,342L627,348L637,356L646,362L653,366L662,370L675,374L689,376L703,376L717,375L731,372L739,370L753,364L760,361L767,356L774,348L781,335L783,327L783,313L782,299L780,292L775,277L772,270L767,262L760,255L752,249L738,243L731,241L717,238L703,236L689,235L682,234L667,231L659,228L646,221L639,216L632,210L625,203L618,195L611,186L604,178L599,171L593,164L587,156L582,149L575,142L568,135L559,128L548,121L540,117L531,114L518,109L510,107L501,100L499,85L504,71L506,64L511,54L517,43L520,36L525,26L532,14L536,7L541,0M263,27L277,24L291,22L305,23L320,27L327,31L335,36L343,43L351,50L357,57L363,64L369,72L376,83L383,92L388,100L393,107L398,114L405,121L413,128L424,135L429,142L430,156L426,169L422,178L419,186L413,199L410,206L405,218L399,228L395,235L390,242L383,249L370,256L368,256L360,249L360,235L362,222L364,213L367,199L366,185L362,178L348,171L341,170L327,170L319,171L305,172L291,174L277,176L263,177L256,178L241,180L227,180L213,178L206,175L199,170L192,162L186,149L184,142L181,128L181,114L183,100L185,92L192,78L196,71L202,64L209,57L217,50L227,43L234,39L241,35L256,30L263,27ZM1123,0L1129,7L1129,7L1135,14L1136,15L1141,21L1143,24L1147,28L1150,33L1153,36L1157,40L1160,43L1164,46L1169,50L1172,51L1179,56L1181,57L1186,59L1193,63L1196,64L1200,66M1200,614L1193,618L1192,619L1186,623L1181,626L1179,627L1172,631L1169,633L1164,636L1157,640L1157,640M760,640L753,634L746,629L738,624L729,619L717,613L710,610L696,604L689,602L675,597L667,595L656,590L646,586L639,582L630,576L619,569L611,562L604,557L596,552L589,548L575,541L568,538L554,534L547,532L533,530L518,529L504,527L495,526L483,524L469,520L462,515L454,508L449,498L447,491L446,476L447,463L449,455L453,441L456,434L462,423L468,412L474,405L480,398L487,391L496,384L504,378L511,373L518,369L533,363L540,361L554,358L568,358L582,360L591,363L604,369L611,373L618,377L629,384L639,389L646,393L660,398L667,399L682,401L696,402L710,401L724,400L738,398L746,398L760,396L774,396L788,397L795,398L809,403L817,406L831,412L838,414L852,417L866,416L875,412L881,405L882,391L880,384L873,373L866,366L859,361L852,356L843,348L835,341L829,334L824,327L817,313L813,306L809,296L805,284L802,277L796,263L792,256L787,249L781,241L774,235L761,228L753,224L738,221L731,220L717,218L703,216L689,213L682,212L667,207L660,204L653,199L643,192L636,185L629,178L623,171L618,163L611,152L605,142L601,135L596,126L591,114L589,107L585,92L584,78L587,64L591,57L598,50L608,43L618,39L628,36L639,33L653,30L664,28L675,27L689,24L703,22L710,21L724,18L738,16L749,14L760,13L774,11L788,10L802,9L817,10L831,12L839,14L852,17L866,21L873,22L888,23L902,24L916,22L923,21L937,19L951,15L959,14L973,9L981,7L994,3L1004,0M277,49L291,49L298,50L312,55L320,60L327,67L334,77L337,85L339,100L334,114L328,121L320,128L312,132L305,135L291,140L281,142L270,144L256,144L241,142L234,140L227,135L220,128L215,114L216,100L220,86L225,78L231,71L239,64L249,58L256,55L270,50L277,49ZM1200,594L1195,597L1193,599L1186,603L1184,604L1179,607L1172,611L1171,612L1164,615L1158,619L1157,619L1150,623L1143,626L1143,626L1136,629L1129,632L1125,633L1122,634L1115,636L1108,638L1101,639L1095,640M790,640L781,633L774,627L767,622L760,617L752,612L740,604L731,600L724,596L710,590L703,587L693,583L682,578L675,575L662,569L653,563L646,559L639,553L631,548L622,540L613,533L604,527L596,523L587,519L575,515L561,512L554,511L540,509L525,507L513,505L504,503L492,498L483,491L477,484L474,476L472,462L474,448L477,441L483,428L489,420L495,412L502,405L511,398L518,394L525,391L540,386L550,384L561,384L568,385L582,388L589,391L602,398L611,403L618,407L627,412L639,418L646,420L660,423L675,425L689,425L703,424L717,423L731,423L746,422L760,423L774,425L781,427L795,431L803,434L817,439L824,441L838,445L852,447L866,447L880,445L890,441L901,434L906,427L910,420L913,405L913,391L909,378L905,370L901,363L895,355L888,347L880,341L873,334L864,327L856,320L849,313L843,306L837,299L831,288L825,277L822,270L817,259L811,249L807,242L802,235L795,226L788,220L778,213L767,209L756,206L746,204L731,203L717,201L703,199L696,198L682,194L675,191L664,185L654,178L646,171L640,164L635,156L630,149L625,139L621,128L618,114L618,100L623,85L627,78L633,71L642,64L653,57L660,54L670,50L682,46L693,43L703,40L717,37L727,36L738,34L753,32L767,31L781,31L795,32L809,34L819,36L831,38L845,42L852,43L866,45L880,45L895,44L903,43L916,40L930,37L937,35L951,31L962,28L973,25L987,22L994,20L1008,16L1016,14L1030,12L1044,10L1058,9L1072,11L1083,14L1093,20L1101,25L1108,31L1115,39L1122,47L1129,55L1136,63L1143,71L1150,78L1157,84L1164,90L1172,96L1179,101L1186,108L1193,116L1200,128M1080,640L1079,640L1072,639L1065,637L1058,634L1054,633L1051,631L1044,628L1038,626L1037,625L1030,622L1022,620L1016,619L1015,619L1008,618L1001,618L994,619L993,619L987,620L980,622L973,624L968,626L966,627L959,630L951,633L951,633L944,636L937,639L935,640M1200,576L1189,583L1179,589L1172,593L1163,597L1150,603L1143,605L1129,609L1116,612L1108,612L1096,612L1086,610L1072,605L1065,602L1055,597L1044,593L1037,590L1022,587L1008,587L994,589L987,592L973,597L966,601L959,605L947,612L937,617L930,621L920,626L909,631L902,634L888,639M832,640L824,637L815,633L803,626L795,620L788,615L781,610L773,604L762,597L753,591L746,587L738,583L724,576L717,573L709,569L696,562L689,558L682,554L672,548L663,540L655,533L648,526L641,519L634,512L627,505L619,498L611,493L604,490L589,487L575,485L561,484L549,484L540,482L525,479L518,475L511,469L505,455L508,441L512,434L518,426L528,420L540,415L554,413L568,416L578,420L589,426L596,431L604,437L611,441L622,448L632,452L646,453L660,453L675,451L689,450L700,448L710,447L724,446L738,445L753,446L766,448L774,450L788,453L795,455L809,460L819,462L831,465L845,467L859,468L873,468L888,465L897,462L909,456L916,451L923,442L928,434L930,426L932,412L932,398L930,387L927,377L923,366L918,356L913,348L908,341L901,334L894,327L886,320L878,313L871,306L864,299L857,292L852,284L845,274L839,263L835,256L831,248L824,235L820,228L815,220L809,213L802,206L793,199L781,194L774,192L760,190L746,188L731,187L717,186L710,185L696,181L685,178L675,172L667,167L660,161L653,153L647,142L644,135L640,121L641,107L646,94L652,85L659,78L667,72L675,68L683,64L696,59L703,57L717,53L731,51L739,50L753,49L767,49L781,50L788,51L802,54L815,57L824,59L838,63L845,64L859,65L873,65L880,64L895,61L909,58L916,56L930,52L937,50L951,46L962,43L973,40L987,36L994,34L1008,32L1022,30L1037,29L1051,30L1065,34L1072,37L1082,43L1091,50L1099,57L1105,64L1111,71L1117,78L1124,85L1130,92L1137,100L1144,107L1151,114L1158,121L1164,129L1172,137L1179,148L1183,156L1186,164L1190,178L1193,188L1196,199L1198,213L1200,221M1200,559L1193,563L1184,569L1172,575L1164,578L1152,583L1143,586L1129,588L1115,588L1101,586L1090,583L1079,579L1072,576L1058,569L1051,566L1039,562L1030,559L1015,558L1001,559L991,562L980,566L973,570L963,576L953,583L944,589L937,594L930,598L920,604L909,610L902,614L888,619L880,621L866,623L852,623L838,621L831,618L817,612L809,607L802,603L794,597L784,590L774,583L767,578L760,573L753,569L741,562L731,556L724,551L717,547L708,540L699,533L692,526L687,519L682,505L686,491L694,484L703,479L710,476L724,473L738,471L753,471L767,473L781,475L788,477L802,480L817,483L824,484L838,486L852,487L866,487L880,486L895,484L902,483L916,478L923,474L930,468L937,460L943,448L946,441L948,427L949,412L947,398L944,384L942,377L937,363L934,356L930,348L923,337L916,327L909,320L903,313L895,306L888,299L881,292L874,284L868,277L863,270L858,263L852,253L846,242L842,235L838,225L832,213L828,206L823,199L817,191L809,184L798,178L788,175L774,173L760,172L746,172L731,172L721,171L710,169L696,164L689,161L682,156L674,149L667,141L662,128L662,114L667,100L673,92L681,85L689,80L696,77L710,71L717,69L731,67L746,66L760,66L774,68L788,71L795,73L809,78L817,81L831,85L838,86L852,87L863,85L873,83L888,80L895,78L909,73L916,70L930,66L937,63L951,59L959,57L973,53L986,50L994,48L1008,46L1022,46L1037,47L1051,50L1058,53L1066,57L1076,64L1084,71L1091,78L1097,85L1103,92L1109,100L1115,107L1122,114L1129,122L1136,130L1143,138L1150,147L1157,156L1162,164L1166,171L1172,182L1176,192L1179,200L1183,213L1186,225L1189,235L1192,249L1194,256L1199,270M1200,540L1193,545L1186,550L1177,555L1164,560L1157,562L1143,566L1129,567L1115,565L1102,562L1093,559L1085,555L1072,549L1065,545L1055,540L1044,536L1035,533L1022,530L1008,528L994,527L980,528L968,533L959,540L951,547L945,555L938,562L931,569L923,576L916,581L909,586L902,590L888,597L880,599L866,601L852,601L838,598L831,595L822,590L811,583L802,576L795,571L788,564L781,558L774,551L767,544L760,536L754,526L758,512L767,509L781,506L795,506L809,506L824,507L838,507L852,507L866,508L880,507L895,507L909,506L921,505L930,503L943,498L951,491L956,484L959,476L963,462L964,448L965,434L964,420L962,405L959,391L958,384L953,370L951,363L945,348L941,341L937,334L930,323L923,314L916,306L909,299L902,292L895,284L889,277L883,270L877,263L872,256L866,246L860,235L857,228L852,217L847,206L844,199L838,185L835,178L831,169L824,157L817,150L809,146L795,146L781,148L774,150L760,152L746,153L731,153L717,151L710,149L697,142L691,135L687,128L687,114L691,107L697,100L707,92L717,88L730,85L738,85L753,85L760,86L774,90L781,94L792,100L802,107L809,113L817,117L831,119L845,115L852,112L866,107L873,103L882,100L895,94L902,91L915,85L923,82L933,78L944,74L954,71L966,68L980,64L987,63L1001,61L1015,61L1030,62L1037,64L1051,69L1058,74L1065,79L1073,85L1080,92L1086,100L1093,109L1101,117L1108,126L1115,135L1121,142L1127,149L1133,156L1139,164L1144,171L1150,180L1157,192L1161,199L1164,207L1170,220L1172,228L1177,242L1179,249L1183,263L1186,271L1190,284L1193,292L1198,306M1200,520L1192,526L1181,533L1172,538L1164,541L1150,544L1136,545L1122,544L1110,540L1101,537L1093,533L1079,527L1072,523L1064,519L1051,513L1044,510L1031,505L1022,501L1015,497L1005,491L998,484L993,476L988,462L986,455L982,441L980,428L978,420L975,405L973,395L970,384L966,370L963,363L959,351L954,341L951,334L944,322L938,313L933,306L928,299L922,292L915,284L909,277L902,270L895,261L888,252L881,242L877,235L873,227L868,213L865,206L861,192L859,184L857,171L857,156L859,149L866,136L873,128L880,122L888,116L895,112L903,107L916,100L923,96L931,92L944,87L951,85L966,80L975,78L987,76L1001,75L1015,76L1027,78L1037,82L1044,85L1055,92L1063,100L1070,107L1076,114L1082,121L1088,128L1093,135L1101,144L1108,153L1115,161L1122,170L1129,178L1134,185L1139,192L1143,199L1150,211L1155,220L1158,228L1163,242L1166,249L1171,263L1173,270L1177,284L1180,292L1185,306L1187,313L1193,326L1197,334M859,540L866,540L867,540L873,542L880,545L884,548L885,555L880,561L880,562L873,565L866,567L859,567L852,565L846,562L845,561L840,555L841,548L845,545L852,542L859,540L859,540ZM1200,495L1193,502L1186,508L1179,512L1164,519L1157,521L1143,522L1129,521L1121,519L1108,515L1101,512L1086,505L1079,502L1070,498L1058,492L1051,489L1041,484L1030,476L1022,471L1015,464L1009,455L1005,448L1001,441L995,427L993,420L988,405L986,398L982,384L980,377L975,363L972,356L967,341L964,334L959,323L953,313L949,306L944,299L937,289L930,280L923,272L916,264L910,256L904,249L899,242L895,235L888,221L885,213L880,200L879,192L877,178L879,164L881,156L888,142L893,135L900,128L909,121L916,116L923,112L932,107L944,101L951,98L966,94L973,92L987,90L1001,90L1015,92L1022,94L1035,100L1044,105L1051,111L1058,118L1065,126L1072,135L1078,142L1084,149L1090,156L1096,164L1102,171L1108,178L1115,186L1122,195L1129,204L1135,213L1139,220L1143,228L1150,242L1153,249L1157,261L1161,270L1164,282L1167,292L1172,305L1174,313L1179,326L1182,334L1186,345L1191,356L1194,363L1200,374M973,107L987,105L1001,106L1008,107L1022,112L1030,116L1037,122L1044,128L1051,135L1058,144L1065,152L1072,161L1079,169L1086,177L1093,185L1099,192L1106,199L1112,206L1118,213L1123,220L1129,230L1136,242L1139,249L1143,257L1148,270L1151,277L1155,292L1157,299L1161,313L1164,324L1167,334L1172,348L1174,356L1179,369L1181,377L1186,388L1190,398L1193,406L1197,420L1199,434L1199,448L1194,462L1190,469L1185,476L1177,484L1166,491L1157,494L1143,496L1129,494L1115,491L1108,489L1094,484L1086,481L1076,476L1065,472L1058,468L1047,462L1037,455L1030,449L1022,441L1017,434L1013,427L1008,419L1002,405L999,398L994,384L991,377L987,364L984,356L980,345L976,334L973,327L967,313L963,306L959,298L951,286L945,277L940,270L935,263L929,256L923,249L916,239L909,228L905,220L902,212L898,199L896,185L897,171L901,156L905,149L910,142L917,135L925,128L936,121L944,116L951,113L966,108L973,107ZM959,128L973,123L987,122L1001,124L1013,128L1022,134L1030,140L1037,146L1044,154L1051,162L1058,171L1064,178L1071,185L1077,192L1084,199L1091,206L1098,213L1105,220L1110,228L1116,235L1122,244L1129,256L1132,263L1136,272L1141,284L1143,292L1147,306L1150,319L1152,327L1155,341L1157,352L1160,363L1162,377L1164,390L1166,398L1168,412L1168,427L1164,440L1160,448L1153,455L1143,460L1132,462L1122,463L1115,462L1101,460L1086,456L1079,454L1065,449L1058,445L1050,441L1041,434L1033,427L1027,420L1022,412L1015,402L1010,391L1007,384L1001,370L998,363L994,351L990,341L987,332L982,320L980,313L974,299L970,292L966,283L959,271L954,263L949,256L943,249L937,240L930,230L925,220L921,213L917,199L915,192L915,178L917,171L923,156L928,149L935,142L944,135L951,131L959,128ZM966,147L980,144L994,145L1005,149L1015,156L1022,162L1030,169L1037,176L1044,184L1051,191L1058,198L1065,205L1072,211L1079,217L1086,224L1093,231L1101,239L1108,248L1113,256L1118,263L1122,271L1127,284L1130,292L1134,306L1136,313L1139,327L1141,341L1142,356L1143,370L1143,384L1141,398L1136,411L1130,420L1122,427L1115,430L1101,432L1086,432L1072,429L1065,426L1053,420L1044,413L1037,406L1031,398L1026,391L1021,384L1015,372L1011,363L1008,356L1003,341L1000,334L995,320L993,313L988,299L985,292L980,277L977,270L973,262L966,250L961,242L956,235L951,227L944,214L941,206L938,192L939,178L944,165L951,156L959,151L966,147ZM980,190L994,186L1008,192L1015,197L1022,202L1030,207L1039,213L1051,220L1058,225L1065,230L1072,235L1080,242L1088,249L1095,256L1101,263L1108,275L1113,284L1116,292L1120,306L1122,313L1124,327L1125,341L1125,356L1123,370L1121,377L1115,391L1108,398L1101,403L1093,405L1079,406L1072,405L1058,399L1051,394L1044,388L1037,380L1030,370L1026,363L1022,356L1016,341L1014,334L1009,320L1007,313L1004,299L1001,289L998,277L995,263L993,256L989,242L986,235L982,220L979,213L977,199L980,190ZM1030,256L1044,251L1058,254L1065,257L1074,263L1082,270L1089,277L1094,284L1101,298L1103,306L1106,320L1108,334L1106,348L1101,363L1096,370L1086,377L1079,378L1067,377L1058,373L1051,367L1044,359L1037,348L1033,341L1030,332L1026,320L1023,306L1022,299L1021,284L1022,270L1025,263L1030,256ZM1058,299L1065,299L1072,304L1073,306L1077,313L1078,320L1078,327L1073,334L1072,335L1065,335L1064,334L1058,329L1057,327L1054,320L1053,313L1054,306L1058,299Z"/></g><path d="M1135 -10C1100 70 1160 140 1120 230S1075 350 1125 430 1160 550 1110 650" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 9" stroke-linecap="round"/></g></defs><use href="#topo"/></svg>
   <div class="wrap">
     <div>
-    
-      <h1>Samit Saenkham</h1>
       <p class="role-line">Medical Technologist and laboratory supervisor for humanitarian health programs</p>
-      <p class="lead">20 years running diagnostic laboratories and malaria programs for displaced communities in Thailand-Myanmar border, with the training, data and stock systems that keep them accurate in remote settings.</p>
+      <h1>Samit Saenkham</h1>
+      <p class="lead">Twenty years running diagnostic laboratories and malaria programs for displaced communities along the Thai–Myanmar border, with the training, data and stock systems that keep them accurate in remote settings.</p>
       <div class="actions">
         <a class="btn btn-light" href="mailto:smskinvest@gmail.com">Email me</a>
         <a class="btn btn-line" href="#experience">See experience</a>
       </div>
       <ul class="hero-meta">
-        <li>Licensed medical technologist, Thailand (valid to 14 October 2028)</li>
-        <li>Based in Nongbualamphu, Thailand</li>
+        <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg><span>Field-based on the Thai–Myanmar border: Mae Sariang and Sop Moei, Mae Hong Son</span></li>
+        <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-award"/></svg><span>Licensed medical technologist, Thailand (valid to 14 October 2028)</span></li>
       </ul>
     </div>
     <div class="field">
@@ -275,18 +304,18 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
 <section class="sec" id="experience">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Experience</h2>
-      <p>Two roles at Malteser International. Select a role, then choose a focus to see only the work that matters to you.</p>
+      <h2><span class="tile"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-case"/></svg></span>Experience</h2>
+      <p>Two roles at Malteser International on the Thai–Myanmar border. Select a role, then choose a focus to see only the work that matters to you.</p>
     </div>
 
     <div class="timeline">
       <div role="tablist" aria-label="Roles" aria-orientation="vertical">
         <button class="tl-row role-lab" role="tab" id="tab-lab" aria-controls="panel-lab" aria-selected="true">
-          <span class="tl-top"><span class="tl-title">Laboratory Supervisor</span><span class="tl-years">2005–2026</span></span>
+          <span class="tl-top"><span class="tl-title"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-micro"/></svg>Laboratory Supervisor</span><span class="tl-years">2005–2026</span></span>
           <span class="tl-track" aria-hidden="true"><span class="tl-bar" style="--l:0%;--w:100%"></span></span>
         </button>
         <button class="tl-row role-gf" role="tab" id="tab-gf" aria-controls="panel-gf" aria-selected="false" tabindex="-1">
-          <span class="tl-top"><span class="tl-title">Global Fund Focal Point</span><span class="tl-years">2021–2024</span></span>
+          <span class="tl-top"><span class="tl-title"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Global Fund Focal Point</span><span class="tl-years">2021–2024</span></span>
           <span class="tl-track" aria-hidden="true"><span class="tl-bar" style="--l:76.19%;--w:14.29%"></span></span>
         </button>
       </div>
@@ -315,7 +344,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
     <!-- Role 1 -->
     <div class="panel role-lab" role="tabpanel" id="panel-lab" aria-labelledby="tab-lab">
       <div class="panel-head">
-        <h3>Laboratory Supervisor</h3>
+        <h3><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-micro"/></svg>Laboratory Supervisor</h3>
         <div class="panel-meta">
           <span>Malteser International, Mae Sariang, Thailand, 2005–2026</span>
           <span>Project: Preventive and Curative Health Care Relief</span>
@@ -323,7 +352,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
       </div>
       <div class="groups">
         <div class="grp">
-          <h4>Laboratory operations</h4>
+          <h4><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-micro"/></svg>Laboratory operations</h4>
           <ul>
             <li data-tags="lead lab">Supervised 18 laboratory assistants across two shelters, keeping routine diagnostics accurate.</li>
             <li data-tags="lab">Introduced new diagnostic tests to strengthen clinical decision-making.</li>
@@ -335,14 +364,14 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
           </ul>
         </div>
         <div class="grp">
-          <h4>Capacity building</h4>
+          <h4><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-users"/></svg>Capacity building</h4>
           <ul>
             <li data-tags="training">Designed and delivered a 6-month laboratory training program (3 months theory, 3 months practicum) for remote, low-electricity settings, an uncommon context in Thailand.</li>
             <li data-tags="training lab">Adapted modern diagnostic knowledge into practical, low-resource methods that keep diagnosis reliable.</li>
           </ul>
         </div>
         <div class="grp">
-          <h4>Data monitoring and evaluation</h4>
+          <h4><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pulse"/></svg>Data monitoring and evaluation</h4>
           <ul>
             <li data-tags="data digital">Introduced KoBo digital data collection to capture patient diagnostics in real time.</li>
             <li data-tags="data lab">Analyzed testing trends to monitor medic ordering patterns, diagnostic accuracy and risk alerts such as diabetes, pre-eclampsia and hepatitis in pregnancy.</li>
@@ -351,7 +380,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
           </ul>
         </div>
         <div class="grp">
-          <h4>Digital innovation and systems</h4>
+          <h4><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Digital innovation and systems</h4>
           <ul>
             <li data-tags="digital supply">Developed digital inventory apps for stock in/out, waybills and reporting, replacing manual processes.</li>
             <li data-tags="data program">Presented cost-per-test analyses and budget-use reports to senior management for strategic planning.</li>
@@ -366,7 +395,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
     <!-- Role 2 -->
     <div class="panel role-gf" role="tabpanel" id="panel-gf" aria-labelledby="tab-gf">
       <div class="panel-head">
-        <h3>Global Fund Focal Point</h3>
+        <h3><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Global Fund Focal Point</h3>
         <div class="panel-meta">
           <span>Malteser International, Mae Sariang, Thailand, 2021–2024</span>
           <span>Project: The Regional Artemisinin Initiative 3 Elimination (RAI3E)</span>
@@ -375,7 +404,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
       </div>
       <div class="groups">
         <div class="grp">
-          <h4>Key achievements</h4>
+          <h4><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>Key achievements</h4>
           <ul>
             <li data-tags="program">Established structured malaria program systems that enabled a smooth transition to RAI4E.</li>
             <li data-tags="program lab">Ensured timely diagnosis and treatment under the Thailand National Malaria Treatment Guidelines.</li>
@@ -384,7 +413,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
           </ul>
         </div>
         <div class="grp">
-          <h4>Program leadership and implementation, 2021–2023</h4>
+          <h4><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-clipplus"/></svg>Program leadership and implementation, 2021–2023</h4>
           <ul>
             <li data-tags="program lead">Led full implementation of Global Fund malaria activities in line with national malaria guidelines.</li>
             <li data-tags="program">Planned and managed activity-based budgets, including community-level HR.</li>
@@ -392,7 +421,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
           </ul>
         </div>
         <div class="grp">
-          <h4>Core activities</h4>
+          <h4><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-drop"/></svg>Core activities</h4>
           <ul>
             <li data-tags="lab program">Established and operated malaria posts for diagnosis and treatment (RDT and microscopy).</li>
             <li data-tags="program">Ran proactive and reactive case detection in high-risk and index-case areas.</li>
@@ -403,7 +432,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
           </ul>
         </div>
         <div class="grp">
-          <h4>Reporting and data</h4>
+          <h4><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-report"/></svg>Reporting and data</h4>
           <ul>
             <li data-tags="data">Entered and managed malaria patient data in the national malaria database.</li>
             <li data-tags="data program">Produced quarterly reports to the SR: narrative reports by targets and budget lines, Malaria Information System datasets (PR format), financial reports (expenditure, forecast, carry-over), and stock and commodity reports.</li>
@@ -415,7 +444,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
           </ul>
         </div>
         <div class="grp">
-          <h4>Representation and coordination</h4>
+          <h4><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-hospital"/></svg>Representation and coordination</h4>
           <ul>
             <li data-tags="program">Represented the organization in provincial and district malaria review meetings.</li>
             <li data-tags="program">Coordinated with the SR, VBDU and shelter committees on surveillance, IRS and outbreak prevention.</li>
@@ -432,24 +461,24 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
 <section class="sec sec-alt" id="tools">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Digital tools built for the field</h2>
+      <h2><span class="tile"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg></span>Digital tools built for the field</h2>
       <p>Mobile apps and dashboards made with tools such as AppSheet and KoBo to improve work efficiency and accuracy.</p>
     </div>
     <ul class="tool-grid">
       <li class="tool">
-        <h3>Inventory App</h3>
+        <h3><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pill"/></svg>Inventory App</h3>
         <p>Keeps laboratory supplies and equipment on record in one place, replacing manual paper logs.</p>
         <span class="kind">Mobile app</span>
         <!-- To link a live demo, add: <a class="tool-link" href="YOUR-URL">Open the app</a> -->
       </li>
       <li class="tool">
-        <h3>Stock In-Out App</h3>
+        <h3><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-box"/></svg>Stock In-Out App</h3>
         <p>Tracks stock received and issued with waybills, expiry alerts and reports for budget follow-up.</p>
         <span class="kind">Mobile app</span>
       </li>
     </ul>
     <div class="gallery">
-      <h3>Dashboards</h3>
+      <h3><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pulse"/></svg>Dashboards</h3>
       <p class="gallery-note">Screenshots of dashboards built for the laboratory and malaria program.</p>
       <ul class="shot-grid">
       <li>
@@ -509,7 +538,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
       </ul>
     </div>
     <div class="also">
-      <h3>Also built or introduced</h3>
+      <h3><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-thermo"/></svg>Also built or introduced</h3>
       <p>KoBo real-time data collection for patient diagnostics, an online cold-chain reporting system, a digital staff check-in/out system, and a searchable database of laboratory records.</p>
     </div>
   </div>
@@ -518,11 +547,11 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
 <section class="sec" id="skills">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Skills</h2>
+      <h2><span class="tile"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-steth"/></svg></span>Skills</h2>
     </div>
     <div class="skill-grid">
       <div>
-        <h3>Digital and IT</h3>
+        <h3><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-laptop"/></svg>Digital and IT</h3>
         <ul>
           <li>MS Office tools</li>
           <li>Excel: queries and pivot tables</li>
@@ -532,7 +561,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
         </ul>
       </div>
       <div>
-        <h3>Technical</h3>
+        <h3><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-tube"/></svg>Technical</h3>
         <ul>
           <li>Laboratory setup</li>
           <li>Malaria and TB</li>
@@ -541,7 +570,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
         </ul>
       </div>
       <div>
-        <h3>Program work</h3>
+        <h3><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-clipcheck"/></svg>Program work</h3>
         <ul>
           <li>Activity planning</li>
           <li>External reports</li>
@@ -556,16 +585,16 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
 <section class="sec sec-alt" id="education">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Education and license</h2>
+      <h2><span class="tile"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-cap"/></svg></span>Education and license</h2>
     </div>
     <div class="edu">
       <div>
-        <h3>Degree</h3>
+        <h3><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-cap"/></svg>Degree</h3>
         <p class="big">Khon Kaen University</p>
         <p class="sub">Bachelor of Science, Medical Technology</p>
       </div>
       <div>
-        <h3>Professional license</h3>
+        <h3><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-award"/></svg>Professional license</h3>
         <p class="big">Medical Technology License no. 6044</p>
         <p class="sub">Valid to 14 October 2028</p>
       </div>
@@ -576,10 +605,11 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
 </main>
 
 <footer class="contact on-dark" id="contact">
+  <svg class="topo topo-soft" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#topo"/></svg>
   <div class="wrap sec">
     <div class="contact-grid">
       <div>
-        <h2>Contact</h2>
+        <h2><span class="tile"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span>Contact</h2>
         <p>Get in touch about roles, references or collaboration.</p>
         <div class="actions">
           <a class="btn btn-light" href="mailto:smskinvest@gmail.com">Send an email</a>
@@ -590,7 +620,7 @@ h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif
       <dl>
         <div><dt>Email</dt><dd><a href="mailto:smskinvest@gmail.com">smskinvest@gmail.com</a></dd></div>
         <div><dt>Phone</dt><dd><a href="tel:+66934164575">+66 93 416 4575</a></dd></div>
-        <div><dt>Location</dt><dd>Nongbualamphu, Thailand</dd></div>
+        <div><dt>Home base</dt><dd>Nongbualamphu, Thailand</dd></div>
       </dl>
     </div>
     <p class="foot">&copy; 2026 Samit Saenkham</p>
