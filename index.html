@@ -1,415 +1,684 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samit Saenkham - Interactive Professional Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Samit Saenkham | Medical Technologist</title>
+<meta name="description" content="Medical technologist and laboratory supervisor with 20 years of experience in laboratory quality, malaria programs, training and health data systems for displaced communities in Thailand.">
+<meta name="theme-color" content="#0A3B3A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%230A3B3A'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --pine-900:#0A3B3A;
+  --pine-700:#0F5A57;
+  --mint-300:#A9D6D0;
+  --mint-100:#DCEDEA;
+  --mist:#EEF5F3;
+  --paper:#FAFCFB;
+  --ink:#183230;
+  --ink-soft:#4A6461;
+  --line:#CBDCD8;
+  --giemsa:#7B3F86;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --sans:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --wrap:1120px;
+  color-scheme:light;
+}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--giemsa);outline-offset:3px;border-radius:2px}
+.on-dark :focus-visible{outline-color:#fff}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-        .chart-container {
-            position: relative;
-            margin: auto;
-            height: 400px;
-            width: 100%;
-        }
+/* Navigation */
+.nav{position:sticky;top:0;z-index:20;background:rgba(250,252,251,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:1.25rem;height:3.5rem}
+.brand{font:500 1.2rem var(--serif);text-decoration:none;white-space:nowrap;color:var(--pine-900)}
+.nav ul{display:flex;gap:.25rem;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav li{display:flex;height:3.5rem}
+.nav a.link{display:flex;align-items:center;padding:0 .75rem;font-size:.9375rem;font-weight:500;color:var(--ink-soft);text-decoration:none;white-space:nowrap;border-bottom:3px solid transparent;border-top:3px solid transparent}
+.nav a.link:hover{color:var(--pine-900)}
+.nav a.link[aria-current="true"]{color:var(--pine-900);border-bottom-color:var(--giemsa)}
 
-        .interactive-row { transition: all 0.3s ease; cursor: pointer; }
-        .interactive-row:hover { background-color: #f1f5f9; transform: translateX(5px); }
-        
-        .tab-active { border-bottom: 3px solid #2563eb; color: #2563eb; font-weight: 600; }
-        .tab-inactive { color: #64748b; border-bottom: 3px solid transparent; }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
+/* Hero */
+.hero{background:var(--pine-900);color:#fff}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(2rem,6vw,5rem);align-items:center;padding-block:clamp(2.5rem,7vw,5.5rem)}
+.role-line{margin:0 0 .75rem;color:var(--mint-300);font-weight:500}
+h1{margin:0 0 1.25rem;font:500 clamp(2.6rem,1.6rem + 4.4vw,4.5rem)/1.02 var(--serif);letter-spacing:-.015em}
+.lead{max-width:34rem;margin:0 0 1.75rem;font-size:1.1875rem;color:var(--mint-100)}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.6rem 1.25rem;border:2px solid transparent;border-radius:.375rem;font:600 1rem var(--sans);text-decoration:none;cursor:pointer}
+.btn-light{background:#fff;color:var(--pine-900)}
+.btn-light:hover{background:var(--mint-100)}
+.btn-line{background:transparent;border-color:rgba(255,255,255,.55);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.hero-meta{display:grid;gap:.2rem;margin:1.75rem 0 0;padding:0;list-style:none;color:var(--mint-300);font-size:.9375rem}
 
-        .profile-img-container {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid #2563eb;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
-    </style>
+/* Microscope field: portrait framed by a graticule ring */
+.field{position:relative;width:min(100%,25rem);aspect-ratio:1;justify-self:end}
+.field svg{position:absolute;inset:0;width:100%;height:100%}
+.photo{position:absolute;inset:11%;display:grid;place-items:center;overflow:hidden;border-radius:50%;background:var(--pine-700)}
+.photo span{font:500 4rem var(--serif);color:var(--mint-300)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ring{fill:none;stroke:rgba(255,255,255,.4);stroke-width:.6}
+.tick{stroke:rgba(255,255,255,.45);stroke-width:.6;opacity:0;animation:tick-in .3s ease forwards;animation-delay:calc(var(--i) * 9ms + .2s)}
+.tick-major{stroke:rgba(255,255,255,.85);stroke-width:.9}
+.tick-index{stroke:#DDAEE6;stroke-width:1.8}
+@keyframes tick-in{to{opacity:1}}
+
+/* Numbers */
+.stats{background:var(--mist);border-bottom:1px solid var(--line)}
+.stats ul{display:grid;grid-template-columns:repeat(4,1fr);margin:0;padding:0;list-style:none}
+.stats li{padding:1.75rem 1.25rem 1.75rem 0}
+.stats li+li{padding-left:1.5rem;border-left:1px solid var(--line)}
+.stats strong{display:block;font:500 clamp(2rem,1.4rem + 2vw,2.75rem)/1 var(--serif);color:var(--pine-700)}
+.stats span{display:block;max-width:15rem;margin-top:.45rem;color:var(--ink-soft);font-size:.9375rem;line-height:1.4}
+
+/* Sections */
+.sec{padding-block:clamp(3rem,7vw,5.5rem)}
+.sec-alt{background:var(--mist)}
+.sec-head{max-width:40rem;margin-bottom:2rem}
+h2{margin:0 0 .75rem;font:500 clamp(1.9rem,1.4rem + 2vw,2.75rem)/1.1 var(--serif);letter-spacing:-.01em;color:var(--pine-900)}
+.sec-head p{margin:0;color:var(--ink-soft)}
+
+/* Experience: timeline selector */
+.timeline{overflow:hidden;border:1px solid var(--line);border-radius:.5rem;background:#fff}
+.tl-row{display:block;width:100%;padding:1rem 1rem 1.1rem;border:0;border-left:4px solid transparent;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.tl-row+.tl-row{border-top:1px solid var(--line)}
+.tl-row:hover{background:var(--mist)}
+.tl-row[aria-selected="true"]{background:var(--mist);border-left-color:var(--role)}
+.tl-top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.25rem 1rem}
+.tl-title{font:500 1.25rem var(--serif)}
+.tl-years{color:var(--ink-soft);font-size:.9375rem;font-variant-numeric:tabular-nums}
+.tl-track{display:block;position:relative;height:.625rem;margin-top:.6rem;border-radius:2px;background:rgba(15,90,87,.1)}
+.tl-bar{position:absolute;top:0;bottom:0;left:var(--l);width:var(--w);border-radius:2px;background:var(--role);opacity:.45}
+.tl-row[aria-selected="true"] .tl-bar{opacity:1}
+.tl-axis{position:relative;height:1.9rem;margin:0 1rem 0 calc(1rem + 4px);border-top:1px solid var(--line)}
+.tl-axis span{position:absolute;top:.4rem;left:var(--x);transform:translateX(-50%);color:var(--ink-soft);font-size:.8125rem;font-variant-numeric:tabular-nums}
+.role-lab{--role:var(--pine-700)}
+.role-gf{--role:var(--giemsa)}
+
+/* Experience: focus filter */
+.filters{display:none;flex-wrap:wrap;align-items:center;gap:.5rem;margin:1.75rem 0 .5rem}
+.js .filters{display:flex}
+.filters-label{margin-right:.25rem;font-weight:600;font-size:.9375rem}
+.chip{min-height:2.5rem;padding:.35rem .9rem;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font:500 .9375rem var(--sans);cursor:pointer}
+.chip:hover{border-color:var(--pine-700)}
+.chip[aria-pressed="true"]{background:var(--pine-700);border-color:var(--pine-700);color:#fff}
+.chip .n{margin-left:.4rem;opacity:.75;font-variant-numeric:tabular-nums}
+.status{min-height:1.5em;margin:.25rem 0 1.5rem;color:var(--ink-soft);font-size:.9375rem}
+
+/* Experience: role panel */
+.panel-head h3{margin:0;font:500 clamp(1.5rem,1.2rem + 1.2vw,2rem)/1.15 var(--serif);color:var(--pine-900)}
+.panel-meta{display:grid;gap:.15rem;margin:.4rem 0 1.75rem;color:var(--ink-soft);font-size:.9375rem}
+.groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem clamp(2rem,5vw,4rem)}
+.grp h4{margin:0 0 .7rem;padding-bottom:.5rem;border-bottom:2px solid var(--role);font:600 1rem var(--sans);color:var(--pine-900)}
+.grp ul{display:grid;gap:.65rem;margin:0;padding:0;list-style:none}
+.grp li{position:relative;padding-left:1.1rem;line-height:1.55}
+.grp li::before{content:"";position:absolute;left:0;top:.62em;width:.4rem;height:.4rem;border-radius:50%;background:var(--role)}
+.empty{margin:0;padding:1rem 1.25rem;border-left:4px solid var(--role);background:var(--mist)}
+.linkbtn{padding:0;border:0;background:none;color:var(--pine-700);font:inherit;font-weight:600;text-decoration:underline;text-underline-offset:.2em;cursor:pointer}
+
+/* Digital tools */
+.tool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem clamp(2rem,5vw,4rem);margin:0;padding:0;list-style:none}
+.tool{padding-top:1rem;border-top:3px solid var(--pine-700)}
+.tool h3{margin:0 0 .4rem;font:500 1.5rem/1.2 var(--serif)}
+.tool p{margin:0 0 .6rem}
+.kind{color:var(--pine-700);font-size:.9375rem;font-weight:600}
+.tool-link{display:inline-block;margin-left:.75rem;color:var(--pine-700);font-size:.9375rem;font-weight:600}
+.also{margin:2.5rem 0 0;padding:1.25rem 1.5rem;border:1px solid var(--line);border-left:4px solid var(--giemsa);border-radius:.375rem;background:#fff}
+.also h3{margin:0 0 .4rem;font:600 1rem var(--sans);color:var(--pine-900)}
+.also p{margin:0;color:var(--ink-soft)}
+
+/* Skills and education */
+.skill-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem clamp(1.5rem,4vw,3rem)}
+.skill-grid h3,.edu h3{margin:0 0 .6rem;padding-bottom:.5rem;border-bottom:2px solid var(--pine-700);font:600 1rem var(--sans);color:var(--pine-900)}
+.skill-grid ul{margin:0;padding:0;list-style:none}
+.skill-grid li{padding:.5rem 0;border-bottom:1px solid var(--line)}
+.edu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem clamp(1.5rem,4vw,3rem)}
+.edu p{margin:0}
+.edu .big{font:500 1.5rem/1.25 var(--serif);color:var(--ink)}
+.edu .sub{color:var(--ink-soft)}
+
+/* Contact */
+.contact{background:var(--pine-900);color:#fff}
+.contact h2{color:#fff}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 4rem;align-items:start}
+.contact-grid>div>p{max-width:28rem;margin:0 0 1.5rem;color:var(--mint-100)}
+.contact dl{display:grid;gap:1.25rem;margin:0}
+.contact dt{color:var(--mint-300);font-size:.9375rem}
+.contact dd{margin:.1rem 0 0;font-size:1.1875rem;overflow-wrap:anywhere}
+.copy-btn{display:none}
+.js .copy-btn{display:inline-flex}
+.foot{margin-top:clamp(2.5rem,5vw,4rem);padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.2);color:var(--mint-300);font-size:.9375rem}
+
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr}
+  .field{order:-1;justify-self:start;width:min(62%,15rem)}
+  .groups,.tool-grid,.contact-grid,.edu{grid-template-columns:1fr}
+  .stats ul{grid-template-columns:1fr 1fr}
+  .stats li:nth-child(3){padding-left:0;border-left:0}
+  .stats li:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:640px){
+  .skill-grid{grid-template-columns:1fr}
+  .nav .wrap{gap:.75rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .tick{animation:none;opacity:1}
+}
+@media print{
+  .nav,.filters,.status,.timeline,.actions,.field,.copy-btn{display:none!important}
+  .hero,.contact{background:#fff!important;color:#000!important}
+  .hero *,.contact *{color:#000!important}
+  [role="tabpanel"][hidden]{display:block!important}
+  .sec{padding-block:1.5rem}
+}
+</style>
 </head>
-<body class="antialiased selection:bg-blue-200">
+<body>
 
-    <!-- Header Section -->
-    <header class="bg-slate-900 text-white pt-16 pb-20 px-6 border-b-8 border-blue-600 relative overflow-hidden">
-        <div class="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between">
-            <div class="text-center md:text-left mb-6 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-1">Samit Saenkham</h1>
-                <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-4 mt-2">
-                    <span class="bg-blue-600 px-3 py-1 rounded text-sm font-bold uppercase">Medical Technologist</span>
-                    <span class="bg-slate-700 px-3 py-1 rounded text-sm border border-slate-600">License no. 6044 (Valid Oct 2028)</span>
-                </div>
-                <p class="max-w-2xl text-slate-300 text-lg leading-relaxed">
-                    Over 18 years of experience in humanitarian health settings and refugee camps. Specialized in <strong>Capacity Building</strong>, <strong>Supply Chain & Inventory Management</strong>, and deploying digital solutions (AppSheet) to optimize medical relief operations.
-                </p>
-                <div class="mt-6 flex gap-4 justify-center md:justify-start">
-                    <a href="#jd-alignment" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded shadow transition font-medium">🔍 View JD Alignment</a>
-                    <a href="mailto:smskinvest@gmail.com" class="bg-slate-700 hover:bg-slate-600 text-white px-6 py-2 rounded shadow transition font-medium">✉️ Contact Me</a>
-                </div>
-            </div>
-            
-            <div class="hidden md:flex flex-col items-center md:items-end gap-3 text-right text-slate-400">
-                <!-- Profile Image -->
-                <div class="profile-img-container mb-2 bg-slate-800 flex items-center justify-center">
-                    <img src="https://lh3.googleusercontent.com/d/1zAMoH96qNHx0jYBF8AzR88L12rreqjer" alt="Samit Saenkham" class="w-full h-full object-cover">
-                </div>
-                <span class="bg-slate-800 px-4 py-2 rounded-lg border border-slate-700 w-full md:w-auto">📍 Nongbualamphu, Thailand</span>
-                <span class="bg-slate-800 px-4 py-2 rounded-lg border border-slate-700 w-full md:w-auto">📞 +66 93 416 4575</span>
-                <span class="bg-slate-800 px-4 py-2 rounded-lg border border-slate-700 text-blue-300 text-xs font-mono w-full md:w-auto uppercase tracking-tighter">AppSheet • KoBo • Notion • Excel • Pivot • Dashboard</span>
-            </div>
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="#top">Samit Saenkham</a>
+    <ul>
+      <li><a class="link" href="#experience">Experience</a></li>
+      <li><a class="link" href="#tools">Digital tools</a></li>
+      <li><a class="link" href="#skills">Skills</a></li>
+      <li><a class="link" href="#education">Education</a></li>
+      <li><a class="link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero on-dark" id="top">
+  <div class="wrap">
+    <div>
+      <p class="role-line">Medical Technologist and laboratory supervisor for humanitarian health programs</p>
+      <h1>Samit Saenkham</h1>
+      <p class="lead">Twenty years running diagnostic laboratories and malaria programs for displaced communities in northwestern Thailand, with the training, data and stock systems that keep them accurate in remote settings.</p>
+      <div class="actions">
+        <a class="btn btn-light" href="mailto:smskinvest@gmail.com">Email me</a>
+        <a class="btn btn-line" href="#experience">See experience</a>
+      </div>
+      <ul class="hero-meta">
+        <li>Licensed medical technologist, Thailand (valid to 14 October 2028)</li>
+        <li>Based in Nongbualamphu, Thailand</li>
+      </ul>
+    </div>
+    <div class="field">
+      <svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+        <circle class="ring" cx="100" cy="100" r="98.5"/>
+        <circle class="ring" cx="100" cy="100" r="80"/>
+        <g id="ticks"></g>
+      </svg>
+      <div class="photo">
+        <span aria-hidden="true">SS</span>
+        <img src="https://lh3.googleusercontent.com/d/1zAMoH96qNHx0jYBF8AzR88L12rreqjer" alt="Portrait of Samit Saenkham" referrerpolicy="no-referrer" onerror="this.remove()">
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="stats" aria-label="Career in numbers">
+  <div class="wrap">
+    <ul>
+      <li><strong>20+</strong><span>years in laboratory and field health work, 2005–2026</span></li>
+      <li><strong>18</strong><span>laboratory assistants supervised across two shelters</span></li>
+      <li><strong>6 months</strong><span>laboratory training program designed and delivered for remote settings</span></li>
+      <li><strong>5+</strong><span>digital systems built to replace paper and manual tracking</span></li>
+    </ul>
+  </div>
+</section>
+
+<main>
+
+<section class="sec" id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Experience</h2>
+      <p>Two roles at Malteser International. Select a role, then choose a focus to see only the work that matters to you.</p>
+    </div>
+
+    <div class="timeline">
+      <div role="tablist" aria-label="Roles" aria-orientation="vertical">
+        <button class="tl-row role-lab" role="tab" id="tab-lab" aria-controls="panel-lab" aria-selected="true">
+          <span class="tl-top"><span class="tl-title">Laboratory Supervisor</span><span class="tl-years">2005–2026</span></span>
+          <span class="tl-track" aria-hidden="true"><span class="tl-bar" style="--l:0%;--w:100%"></span></span>
+        </button>
+        <button class="tl-row role-gf" role="tab" id="tab-gf" aria-controls="panel-gf" aria-selected="false" tabindex="-1">
+          <span class="tl-top"><span class="tl-title">Global Fund Focal Point</span><span class="tl-years">2021–2024</span></span>
+          <span class="tl-track" aria-hidden="true"><span class="tl-bar" style="--l:76.19%;--w:14.29%"></span></span>
+        </button>
+      </div>
+      <div class="tl-axis" aria-hidden="true">
+        <span style="--x:0%">2005</span>
+        <span style="--x:23.81%">2010</span>
+        <span style="--x:47.62%">2015</span>
+        <span style="--x:71.43%">2020</span>
+        <span style="--x:95.24%">2025</span>
+      </div>
+    </div>
+
+    <div class="filters" role="group" aria-label="Focus">
+      <span class="filters-label">Focus</span>
+      <button type="button" class="chip" data-focus="all" aria-pressed="true">All</button>
+      <button type="button" class="chip" data-focus="lab" aria-pressed="false">Lab quality</button>
+      <button type="button" class="chip" data-focus="lead" aria-pressed="false">Team leadership</button>
+      <button type="button" class="chip" data-focus="training" aria-pressed="false">Training</button>
+      <button type="button" class="chip" data-focus="data" aria-pressed="false">Data and reporting</button>
+      <button type="button" class="chip" data-focus="digital" aria-pressed="false">Digital tools</button>
+      <button type="button" class="chip" data-focus="supply" aria-pressed="false">Supply chain</button>
+      <button type="button" class="chip" data-focus="program" aria-pressed="false">Program and donors</button>
+    </div>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+
+    <!-- Role 1 -->
+    <div class="panel role-lab" role="tabpanel" id="panel-lab" aria-labelledby="tab-lab">
+      <div class="panel-head">
+        <h3>Laboratory Supervisor</h3>
+        <div class="panel-meta">
+          <span>Malteser International, Mae Sariang, Thailand, 2005–2026</span>
+          <span>Project: Preventive and Curative Health Care Relief</span>
         </div>
-    </header>
-
-    <main class="max-w-6xl mx-auto px-6 py-8 -mt-12 relative z-20">
-        
-        <!-- Section 1: KPI Dashboard -->
-        <section class="mb-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white rounded-xl p-6 shadow-md border border-slate-100 text-center transform hover:-translate-y-1 transition duration-300">
-                    <div class="text-4xl mb-2">⏳</div>
-                    <h3 class="text-3xl font-bold text-slate-800">18+</h3>
-                    <p class="text-xs text-slate-500 font-medium uppercase tracking-wide mt-1">Years Experience</p>
-                </div>
-                <div class="bg-white rounded-xl p-6 shadow-md border border-slate-100 text-center transform hover:-translate-y-1 transition duration-300">
-                    <div class="text-4xl mb-2">👥</div>
-                    <h3 class="text-3xl font-bold text-blue-600">20-30</h3>
-                    <p class="text-xs text-slate-500 font-medium uppercase tracking-wide mt-1">Staff Supervised</p>
-                </div>
-                <div class="bg-white rounded-xl p-6 shadow-md border border-slate-100 text-center transform hover:-translate-y-1 transition duration-300">
-                    <div class="text-4xl mb-2">📈</div>
-                    <h3 class="text-3xl font-bold text-green-600">90%</h3>
-                    <p class="text-xs text-slate-500 font-medium uppercase tracking-wide mt-1">QA Accuracy Goal</p>
-                </div>
-                <div class="bg-white rounded-xl p-6 shadow-md border border-slate-100 text-center transform hover:-translate-y-1 transition duration-300">
-                    <div class="text-4xl mb-2">📱</div>
-                    <h3 class="text-3xl font-bold text-purple-600">3+</h3>
-                    <p class="text-xs text-slate-500 font-medium uppercase tracking-wide mt-1">Digital Systems Deployed</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 2: Skills & Target Alignment -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16" id="jd-alignment">
-            
-            <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col h-full">
-                <div class="mb-6">
-                    <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2"><span>🎯</span> Professional Competency Radar</h2>
-                    <p class="text-sm text-slate-600 mt-2">Visual overview of core skills combining medical expertise, management, and digital innovation.</p>
-                </div>
-                <div class="chart-container flex-grow flex items-center">
-                    <canvas id="skillsRadarChart"></canvas>
-                </div>
-            </section>
-
-            <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col h-full">
-                <div class="mb-6">
-                    <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2"><span>📋</span> Pharmacy Supervisor Alignment</h2>
-                    <p class="text-sm text-slate-600 mt-2">Mapping 18+ years of field experience against MSF/DWBT operational standards.</p>
-                </div>
-                <div class="space-y-4 flex-grow" id="alignment-list"></div>
-            </section>
+      </div>
+      <div class="groups">
+        <div class="grp">
+          <h4>Laboratory operations</h4>
+          <ul>
+            <li data-tags="lead lab">Supervised 18 laboratory assistants across two shelters, keeping routine diagnostics accurate.</li>
+            <li data-tags="lab">Introduced new diagnostic tests to strengthen clinical decision-making.</li>
+            <li data-tags="lab">Brought diagnostics that are rare in Thailand, such as leprosy and filariasis, to remote field settings.</li>
+            <li data-tags="lab">Set up internal and external quality control (QC/EQA) for HIV, TB, syphilis, malaria, parasitology, hematology, hepatitis and pregnancy testing.</li>
+            <li data-tags="lab">Maintained laboratory equipment: microscopes, centrifuges and micropipettes.</li>
+            <li data-tags="program">Planned and managed laboratory budgets and resource allocation.</li>
+            <li data-tags="supply">Managed inventory, stock control and the cold chain for reagents and test kits.</li>
+          </ul>
         </div>
+        <div class="grp">
+          <h4>Capacity building</h4>
+          <ul>
+            <li data-tags="training">Designed and delivered a 6-month laboratory training program (3 months theory, 3 months practicum) for remote, low-electricity settings, an uncommon context in Thailand.</li>
+            <li data-tags="training lab">Adapted modern diagnostic knowledge into practical, low-resource methods that keep diagnosis reliable.</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <h4>Data monitoring and evaluation</h4>
+          <ul>
+            <li data-tags="data digital">Introduced KoBo digital data collection to capture patient diagnostics in real time.</li>
+            <li data-tags="data lab">Analyzed testing trends to monitor medic ordering patterns, diagnostic accuracy and risk alerts such as diabetes, pre-eclampsia and hepatitis in pregnancy.</li>
+            <li data-tags="data digital">Digitized laboratory records into a searchable database, ending long-term paper storage.</li>
+            <li data-tags="data supply">Used data analytics to forecast laboratory consumption and optimize the annual budget.</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <h4>Digital innovation and systems</h4>
+          <ul>
+            <li data-tags="digital supply">Developed digital inventory apps for stock in/out, waybills and reporting, replacing manual processes.</li>
+            <li data-tags="data program">Presented cost-per-test analyses and budget-use reports to senior management for strategic planning.</li>
+            <li data-tags="digital supply">Established an online web system for cold-chain reporting.</li>
+            <li data-tags="digital lead">Developed a digital staff check-in/out system to keep time tracking accurate and accountable.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="empty" hidden>Nothing in this role matches this focus. <button type="button" class="linkbtn" data-goto="panel-gf">See the other role</button></p>
+    </div>
 
-        <!-- Section 3: Professional Experience Explorer -->
-        <section class="mb-16 bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
-            <div class="mb-8">
-                <h2 class="text-2xl font-bold text-slate-800 mb-2">💼 Experience Deep Dive</h2>
-                <p class="text-slate-600">Technical project details and key achievements in each major role.</p>
-            </div>
+    <!-- Role 2 -->
+    <div class="panel role-gf" role="tabpanel" id="panel-gf" aria-labelledby="tab-gf">
+      <div class="panel-head">
+        <h3>Global Fund Focal Point</h3>
+        <div class="panel-meta">
+          <span>Malteser International, Mae Sariang, Thailand, 2021–2024</span>
+          <span>Project: The Regional Artemisinin Initiative 3 Elimination (RAI3E)</span>
+          <span>Mae La Oon and Mae Ra Ma Luang shelters. Principal Recipient: Department of Disease Control, Ministry of Public Health</span>
+        </div>
+      </div>
+      <div class="groups">
+        <div class="grp">
+          <h4>Key achievements</h4>
+          <ul>
+            <li data-tags="program">Established structured malaria program systems that enabled a smooth transition to RAI4E.</li>
+            <li data-tags="program lab">Ensured timely diagnosis and treatment under the Thailand National Malaria Treatment Guidelines.</li>
+            <li data-tags="program">Prevented community outbreaks by proactively detecting asymptomatic cases.</li>
+            <li data-tags="program">Achieved comprehensive coverage with long-lasting insecticidal nets (LLIN) across both shelters.</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <h4>Program leadership and implementation, 2021–2023</h4>
+          <ul>
+            <li data-tags="program lead">Led full implementation of Global Fund malaria activities in line with national malaria guidelines.</li>
+            <li data-tags="program">Planned and managed activity-based budgets, including community-level HR.</li>
+            <li data-tags="program data">Monitored targets, timelines and performance indicators, coordinating directly with the sub-recipient (SR).</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <h4>Core activities</h4>
+          <ul>
+            <li data-tags="lab program">Established and operated malaria posts for diagnosis and treatment (RDT and microscopy).</li>
+            <li data-tags="program">Ran proactive and reactive case detection in high-risk and index-case areas.</li>
+            <li data-tags="program lab">Set up a follow-up system so patients completed 4 blood tests within 90 days.</li>
+            <li data-tags="program">Conducted LLIN surveys and distributions and implemented focal indoor residual spraying (IRS).</li>
+            <li data-tags="training">Delivered malaria training and treatment guideline sessions for medics, CHWs, lab staff, MPWs and MOWs.</li>
+            <li data-tags="supply">Managed malaria commodity forecasting and stock: RDTs, LLINs, antimalarials, chemicals and supplies.</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <h4>Reporting and data</h4>
+          <ul>
+            <li data-tags="data">Entered and managed malaria patient data in the national malaria database.</li>
+            <li data-tags="data program">Produced quarterly reports to the SR: narrative reports by targets and budget lines, Malaria Information System datasets (PR format), financial reports (expenditure, forecast, carry-over), and stock and commodity reports.</li>
+            <li data-tags="data program">Submitted monthly internal performance reports.</li>
+            <li data-tags="data digital">Developed and maintained an internal malaria dashboard with monthly updates.</li>
+            <li data-tags="data">Led monthly data validation, combining digital verification and tally checks.</li>
+            <li data-tags="lab program">Monitored cases and ran slide QC with the Vector Borne Disease Unit (VBDU) to keep treatment in line with national guidelines.</li>
+            <li data-tags="program">Passed regular SR audits and the external Global Fund audit review.</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <h4>Representation and coordination</h4>
+          <ul>
+            <li data-tags="program">Represented the organization in provincial and district malaria review meetings.</li>
+            <li data-tags="program">Coordinated with the SR, VBDU and shelter committees on surveillance, IRS and outbreak prevention.</li>
+            <li data-tags="program">Prepared program documentation and site visits for donor and partner monitoring.</li>
+            <li data-tags="data supply">Gave the SR early malaria trend alerts and medicine forecasts.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="empty" hidden>Nothing in this role matches this focus. <button type="button" class="linkbtn" data-goto="panel-lab">See the other role</button></p>
+    </div>
+  </div>
+</section>
 
-            <div class="flex border-b border-slate-200 mb-6 overflow-x-auto pb-1">
-                <button onclick="switchTab('exp-1')" id="tab-exp-1" class="tab-active px-6 py-3 whitespace-nowrap focus:outline-none transition">
-                    Laboratory Supervisor (2005-Present)
-                </button>
-                <button onclick="switchTab('exp-2')" id="tab-exp-2" class="tab-inactive px-6 py-3 whitespace-nowrap focus:outline-none transition">
-                    Malaria Program Focal Point (2021-2024)
-                </button>
-            </div>
+<section class="sec sec-alt" id="tools">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Digital tools built for the field</h2>
+      <p>Mobile apps and dashboards made with tools such as AppSheet and KoBo to improve work efficiency and accuracy.</p>
+    </div>
+    <ul class="tool-grid">
+      <li class="tool">
+        <h3>Inventory App</h3>
+        <p>Keeps laboratory supplies and equipment on record in one place, replacing manual paper logs.</p>
+        <span class="kind">Mobile app</span>
+        <!-- To link a live demo, add: <a class="tool-link" href="YOUR-URL">Open the app</a> -->
+      </li>
+      <li class="tool">
+        <h3>Stock In-Out App</h3>
+        <p>Tracks stock received and issued with waybills, expiry alerts and reports for budget follow-up.</p>
+        <span class="kind">Mobile app</span>
+      </li>
+      <li class="tool">
+        <h3>Specimen Referral App</h3>
+        <p>Supports referral of specimens, including dried blood spots and slides, to the Vector Borne Disease Unit.</p>
+        <span class="kind">Mobile app</span>
+      </li>
+      <li class="tool">
+        <h3>Malaria Dashboard</h3>
+        <p>Internal dashboard for the Global Fund malaria program, updated monthly to follow performance and data quality.</p>
+        <span class="kind">Dashboard</span>
+      </li>
+    </ul>
+    <div class="also">
+      <h3>Also built or introduced</h3>
+      <p>KoBo real-time data collection for patient diagnostics, an online cold-chain reporting system, a digital staff check-in/out system, and a searchable database of laboratory records.</p>
+    </div>
+  </div>
+</section>
 
-            <!-- Experience 1: Malteser International -->
-            <div id="content-exp-1" class="block animate-fade-in">
-                <div class="mb-6">
-                    <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
-                        <h3 class="text-xl font-bold text-slate-900">Malteser International | <span class="text-blue-600">Laboratory Supervisor</span></h3>
-                        <span class="text-slate-500 font-medium">📍 Mae Sariang, Mae Hong Son</span>
-                    </div>
-                    <p class="text-slate-600 italic mb-4">Project: Preventive and Curative Health Care for Displaced Populations</p>
-                </div>
+<section class="sec" id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Skills</h2>
+    </div>
+    <div class="skill-grid">
+      <div>
+        <h3>Digital and IT</h3>
+        <ul>
+          <li>MS Office tools</li>
+          <li>Excel: queries and pivot tables</li>
+          <li>KoBo and AppSheet</li>
+          <li>Notion</li>
+          <li>Dashboards</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Technical</h3>
+        <ul>
+          <li>Laboratory setup</li>
+          <li>Malaria and TB</li>
+          <li>Cold chain</li>
+          <li>Capacity building</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Program work</h3>
+        <ul>
+          <li>Activity planning</li>
+          <li>External reports</li>
+          <li>Monitoring</li>
+          <li>Stock and inventory management</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="space-y-4">
-                        <div class="bg-slate-50 p-4 rounded-xl border-l-4 border-blue-500">
-                            <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-2">🎓 Training & Capacity Building</h4>
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                Led 3-month intensive training for 8 batches. Redesigned medical curricula for non-medical backgrounds with language barriers. Achieved <strong>>80% pass rate</strong>, successfully integrating graduates into field clinics.
-                            </p>
-                        </div>
-                        <div class="bg-slate-50 p-4 rounded-xl border-l-4 border-green-500">
-                            <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-2">🧪 Team & Quality Management</h4>
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                Supervised 18 lab assistants. Established IQA & EQA systems for HIV, TB, Syphilis, and Malaria. Introduced diagnostic technology for neglected diseases (Leprosy, Filariasis) in remote areas.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="bg-slate-50 p-4 rounded-xl border-l-4 border-purple-500">
-                            <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-2">📱 Digital Health Innovation</h4>
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                Implemented <strong>AppSheet & KoBo</strong> for real-time diagnostic monitoring. Analyzed test consumption trends to eliminate waste and optimize project budget allocation.
-                            </p>
-                        </div>
-                        <div class="bg-slate-50 p-4 rounded-xl border-l-4 border-orange-500">
-                            <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-2">📦 Supply Chain Management</h4>
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                Developed a digital inventory app to eliminate paper-based errors. Prevented stock-outs of critical reagents while managing strict Cold Chain requirements for sensitive supplies.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="sec sec-alt" id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Education and license</h2>
+    </div>
+    <div class="edu">
+      <div>
+        <h3>Degree</h3>
+        <p class="big">Khon Kaen University</p>
+        <p class="sub">Bachelor of Science, Medical Technology</p>
+      </div>
+      <div>
+        <h3>Professional license</h3>
+        <p class="big">Medical Technology License no. 6044</p>
+        <p class="sub">Valid to 14 October 2028</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <!-- Experience 2: Global Fund -->
-            <div id="content-exp-2" class="hidden animate-fade-in">
-                <div class="mb-6">
-                    <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
-                        <h3 class="text-xl font-bold text-slate-900">RAI3E / Global Fund | <span class="text-purple-600">Malaria Program Focal Point</span></h3>
-                        <span class="text-slate-500 font-medium">📍 Mae La Oon & Mae Ra Ma Luang</span>
-                    </div>
-                    <p class="text-slate-600 italic">2021–2024 | Principal Recipient: Department of Disease Control (MoPH)</p>
-                </div>
+</main>
 
-                <div class="space-y-6">
-                    <div class="bg-indigo-50 p-5 rounded-xl border border-indigo-100">
-                        <h4 class="font-bold text-indigo-900 mb-3 flex items-center gap-2">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3.005 3.005 0 013.75-2.906z"></path></svg>
-                            Leadership & Project Implementation
-                        </h4>
-                        <ul class="grid md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-indigo-800">
-                            <li>• Led implementation in alignment with national guidelines.</li>
-                            <li>• Supervised 10 MPWs, 25 MOWs, and 18 lab staff.</li>
-                            <li>• Managed commodity forecasting (RDTs, LLINs, Antimalarials).</li>
-                            <li>• Coordinated specimen referral (DBS/Slides) to VBDU.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-                        <h4 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path></svg>
-                            Data Reporting & Compliance
-                        </h4>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 underline decoration-blue-500 underline-offset-4">Data Management</h5>
-                                <ul class="text-sm text-slate-600 space-y-3">
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-blue-500 mt-1">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                        </span>
-                                        <span>Managed complete patient data entry in the **National Malaria Database**</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-blue-500 mt-1">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                                        </span>
-                                        <span>Maintained Internal Malaria Dashboard with monthly updates; led data validation (digital/tally checks).</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-blue-500 mt-1">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
-                                        </span>
-                                        <span>Submitted monthly internal performance reports and ensured compliance with national treatment guidelines.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 underline decoration-purple-500 underline-offset-4">Reporting & Audit Success</h5>
-                                <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
-                                    <p class="text-xs font-bold text-slate-500 mb-2">Quarterly SR Reports Produced:</p>
-                                    <div class="grid grid-cols-2 gap-2 text-[11px] font-medium text-slate-700">
-                                        <div class="bg-white p-2 rounded shadow-sm border border-slate-200">📋 Narrative (Targets/Budget)</div>
-                                        <div class="bg-white p-2 rounded shadow-sm border border-slate-200">📊 MIS Data (PR Format)</div>
-                                        <div class="bg-white p-2 rounded shadow-sm border border-slate-200">💰 Financial (Actual/Forecast)</div>
-                                        <div class="bg-white p-2 rounded shadow-sm border border-slate-200">📦 Stock & Consumption</div>
-                                    </div>
-                                    <div class="mt-4 pt-4 border-t border-slate-200">
-                                        <p class="text-sm text-slate-600 flex items-center gap-2">
-                                            <span class="text-green-600">🛡️</span>
-                                            Successfully passed multiple <strong>SR Audits</strong> and <strong>Global Fund Audit Reviews</strong>.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<footer class="contact on-dark" id="contact">
+  <div class="wrap sec">
+    <div class="contact-grid">
+      <div>
+        <h2>Contact</h2>
+        <p>Get in touch about roles, references or collaboration.</p>
+        <div class="actions">
+          <a class="btn btn-light" href="mailto:smskinvest@gmail.com">Send an email</a>
+          <button type="button" class="btn btn-line copy-btn" id="copy">Copy email address</button>
+        </div>
+        <span class="sr" id="copy-status" role="status" aria-live="polite"></span>
+      </div>
+      <dl>
+        <div><dt>Email</dt><dd><a href="mailto:smskinvest@gmail.com">smskinvest@gmail.com</a></dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+66934164575">+66 93 416 4575</a></dd></div>
+        <div><dt>Location</dt><dd>Nongbualamphu, Thailand</dd></div>
+      </dl>
+    </div>
+    <p class="foot">&copy; 2026 Samit Saenkham</p>
+  </div>
+</footer>
 
-        <!-- Section 4: Digital Health Showcase -->
-        <section class="mb-16">
-            <h2 class="text-2xl font-bold text-slate-800 mb-8">💡 Custom Digital Solutions (AppSheet)</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-lg transition">
-                    <div class="text-4xl mb-4">📊</div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-2">Lab Stock In-Out</h3>
-                    <p class="text-sm text-slate-600 mb-4">Real-time tracking of medical supplies with expiration alerts and budget utilization reporting.</p>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded uppercase">Supply Chain</span>
-                </div>
-                <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-lg transition">
-                    <div class="text-4xl mb-4">📝</div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-2">Inventory System</h3>
-                    <p class="text-sm text-slate-600 mb-4">Asset management for equipment maintenance and calibration tracking.</p>
-                    <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded uppercase">Asset Management</span>
-                </div>
-                <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-lg transition">
-                    <div class="text-4xl mb-4">💰</div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-2">Expense Tracker</h3>
-                    <p class="text-sm text-slate-600 mb-4">Sharing pesonal expense tracking with co-workers.</p>
-                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded uppercase">Finance</span>
-                </div>
-            </div>
-        </section>
+<script>
+(function () {
+  'use strict';
 
-    </main>
+  /* Graticule ring around the portrait */
+  var ticks = document.getElementById('ticks');
+  if (ticks) {
+    var NS = 'http://www.w3.org/2000/svg';
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < 120; i++) {
+      var a = (i * 3 - 90) * Math.PI / 180;
+      var major = i % 5 === 0;
+      var r1 = 98, r2 = major ? 87 : 93;
+      var l = document.createElementNS(NS, 'line');
+      l.setAttribute('x1', (100 + r1 * Math.cos(a)).toFixed(2));
+      l.setAttribute('y1', (100 + r1 * Math.sin(a)).toFixed(2));
+      l.setAttribute('x2', (100 + r2 * Math.cos(a)).toFixed(2));
+      l.setAttribute('y2', (100 + r2 * Math.sin(a)).toFixed(2));
+      l.setAttribute('class', 'tick' + (i === 0 ? ' tick-index' : major ? ' tick-major' : ''));
+      l.style.setProperty('--i', i);
+      frag.appendChild(l);
+    }
+    ticks.appendChild(frag);
+  }
 
-    <footer class="bg-slate-900 text-slate-500 text-center py-8 mt-12 border-t border-slate-800">
-        <p>Interactive Portfolio &copy; 2026 Samit Saenkham</p>
-    </footer>
+  /* Role tabs and focus filter */
+  var tabs = [].slice.call(document.querySelectorAll('.tl-row'));
+  var panels = [].slice.call(document.querySelectorAll('.panel'));
+  var chips = [].slice.call(document.querySelectorAll('.chip'));
+  var status = document.getElementById('status');
+  var items = [].slice.call(document.querySelectorAll('.grp li'));
+  var focus = 'all';
+  var names = {
+    lab: 'lab quality', lead: 'team leadership', training: 'training',
+    data: 'data and reporting', digital: 'digital tools',
+    supply: 'supply chain', program: 'program and donors'
+  };
 
-    <script>
-        const jdAlignmentData = [
-            { id: 'align-1', jdReq: "Storage & Stock Management", myExp: "18+ years of field-based inventory management. Developed 'Lab Stock In-Out' app to digitize stock cards and eliminate zero-stock risks.", icon: "📦" },
-            { id: 'align-2', jdReq: "Good Storage Conditions", myExp: "Strict adherence to Cold Chain management for tests and reagents.", icon: "🌡️" },
-            { id: 'align-3', jdReq: "Logistics Coordination", myExp: "Experienced in 'Rational Usage' analysis for consumables to ensure donor transparency and cost-efficiency.", icon: "🚚" },
-            { id: 'align-4', jdReq: "Supervising Staff", myExp: "Supervised 18 laboratory assistants and 10 malaria post workers; delivered refresher training as required.", icon: "👥" }
-        ];
+  function hasTag(li, tag) {
+    return li.getAttribute('data-tags').split(' ').indexOf(tag) > -1;
+  }
 
-        const alignmentContainer = document.getElementById('alignment-list');
-        jdAlignmentData.forEach(item => {
-            const el = document.createElement('div');
-            el.className = 'interactive-row bg-slate-50 border border-slate-200 rounded-lg p-4';
-            el.onclick = () => toggleDetails(item.id);
-            el.innerHTML = `
-                <div class="flex justify-between items-center">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xl text-blue-600">${item.icon}</span>
-                        <h3 class="font-bold text-slate-800 text-sm">${item.jdReq}</h3>
-                    </div>
-                    <span id="icon-${item.id}" class="text-slate-400 font-bold">+</span>
-                </div>
-                <div id="details-${item.id}" class="hidden mt-3 pt-3 border-t border-slate-200 text-slate-600 text-xs leading-relaxed">
-                    ${item.myExp}
-                </div>
-            `;
-            alignmentContainer.appendChild(el);
+  function selectRole(panelId, moveFocus) {
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('aria-controls') === panelId;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      if (on && moveFocus) t.focus();
+    });
+    panels.forEach(function (p) { p.hidden = p.id !== panelId; });
+  }
+
+  function applyFocus() {
+    var shown = 0;
+    panels.forEach(function (p) {
+      var inPanel = 0;
+      [].forEach.call(p.querySelectorAll('.grp'), function (g) {
+        var visible = 0;
+        [].forEach.call(g.querySelectorAll('li'), function (li) {
+          var on = focus === 'all' || hasTag(li, focus);
+          li.hidden = !on;
+          if (on) visible++;
         });
+        g.hidden = visible === 0;
+        inPanel += visible;
+      });
+      var empty = p.querySelector('.empty');
+      if (empty) empty.hidden = inPanel !== 0;
+      shown += inPanel;
+    });
+    status.textContent = focus === 'all'
+      ? 'Showing all ' + items.length + ' items across both roles.'
+      : 'Showing ' + shown + ' of ' + items.length + ' items on ' + names[focus] + ' across both roles.';
+  }
 
-        window.toggleDetails = function(id) {
-            const detailsDiv = document.getElementById(`details-${id}`);
-            const iconSpan = document.getElementById(`icon-${id}`);
-            const isHidden = detailsDiv.classList.contains('hidden');
-            detailsDiv.classList.toggle('hidden');
-            iconSpan.innerHTML = isHidden ? '−' : '+';
-        };
+  chips.forEach(function (c) {
+    var f = c.getAttribute('data-focus');
+    var n = f === 'all' ? items.length : items.filter(function (li) { return hasTag(li, f); }).length;
+    var s = document.createElement('span');
+    s.className = 'n';
+    s.textContent = n;
+    c.appendChild(s);
+    c.addEventListener('click', function () {
+      focus = f;
+      chips.forEach(function (x) { x.setAttribute('aria-pressed', x === c ? 'true' : 'false'); });
+      applyFocus();
+    });
+  });
 
-        window.switchTab = function(tabId) {
-            document.getElementById('tab-exp-1').className = tabId === 'exp-1' ? 'tab-active px-6 py-3' : 'tab-inactive px-6 py-3';
-            document.getElementById('tab-exp-2').className = tabId === 'exp-2' ? 'tab-active px-6 py-3' : 'tab-inactive px-6 py-3';
-            document.getElementById('content-exp-1').classList.toggle('hidden', tabId !== 'exp-1');
-            document.getElementById('content-exp-2').classList.toggle('hidden', tabId !== 'exp-2');
-        };
+  tabs.forEach(function (t, idx) {
+    t.addEventListener('click', function () { selectRole(t.getAttribute('aria-controls')); });
+    t.addEventListener('keydown', function (e) {
+      var next = null;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') next = (idx + 1) % tabs.length;
+      else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') next = (idx - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'Home') next = 0;
+      else if (e.key === 'End') next = tabs.length - 1;
+      if (next !== null) {
+        e.preventDefault();
+        selectRole(tabs[next].getAttribute('aria-controls'), true);
+      }
+    });
+  });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const ctx = document.getElementById('skillsRadarChart').getContext('2d');
-            
-            const labels = [
-                'Medical Science', 
-                'Project Management', 
-                'Humanitarian Protocols', 
-                'Digital Innovation', 
-                'Data Reporting', 
-                'Supply Chain'
-            ];
+  [].forEach.call(document.querySelectorAll('[data-goto]'), function (b) {
+    b.addEventListener('click', function () { selectRole(b.getAttribute('data-goto')); });
+  });
 
-            const data = {
-                labels: labels,
-                datasets: [{
-                    label: 'Proficiency level',
-                    data: [85, 80, 95, 90, 90, 85],
-                    fill: true,
-                    backgroundColor: 'rgba(37, 99, 235, 0.2)',
-                    borderColor: 'rgb(37, 99, 235)',
-                    pointBackgroundColor: 'rgb(37, 99, 235)',
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: 'rgb(37, 99, 235)',
-                    borderWidth: 3
-                }]
-            };
+  selectRole('panel-lab');
+  applyFocus();
 
-            const config = {
-                type: 'radar',
-                data: data,
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        r: {
-                            angleLines: { color: 'rgba(148, 163, 184, 0.2)' },
-                            grid: { color: 'rgba(148, 163, 184, 0.2)' },
-                            suggestedMin: 0,
-                            suggestedMax: 100,
-                            ticks: {
-                                display: false,
-                                stepSize: 20
-                            },
-                            pointLabels: {
-                                color: '#475569',
-                                font: {
-                                    family: "'Inter', sans-serif",
-                                    size: 11,
-                                    weight: '600'
-                                }
-                            }
-                        }
-                    },
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            backgroundColor: 'rgba(15, 23, 42, 0.9)',
-                            titleFont: { family: "'Inter', sans-serif", size: 14 },
-                            bodyFont: { family: "'Inter', sans-serif", size: 13 },
-                            padding: 12,
-                            cornerRadius: 8,
-                            callbacks: {
-                                label: function(context) {
-                                    return ` Proficiency level: ${context.parsed.r}/100`;
-                                }
-                            }
-                        }
-                    }
-                }
-            };
+  /* Highlight the current section in the navigation */
+  var links = [].slice.call(document.querySelectorAll('.nav a.link'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) { a.removeAttribute('aria-current'); });
+        var a = document.querySelector('.nav a.link[href="#' + e.target.id + '"]');
+        if (a) a.setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    links.forEach(function (a) {
+      var s = document.querySelector(a.getAttribute('href'));
+      if (s) io.observe(s);
+    });
+  }
 
-            new Chart(ctx, config);
-        });
-    </script>
+  /* Copy email */
+  var copy = document.getElementById('copy');
+  var copyStatus = document.getElementById('copy-status');
+  if (copy) {
+    var EMAIL = 'smskinvest@gmail.com';
+    var done = function () {
+      copy.textContent = 'Email address copied';
+      copyStatus.textContent = 'Email address copied to clipboard';
+      setTimeout(function () {
+        copy.textContent = 'Copy email address';
+        copyStatus.textContent = '';
+      }, 2400);
+    };
+    var fallback = function () {
+      var t = document.createElement('textarea');
+      t.value = EMAIL;
+      t.setAttribute('readonly', '');
+      t.style.position = 'fixed';
+      t.style.opacity = '0';
+      document.body.appendChild(t);
+      t.select();
+      try { document.execCommand('copy'); done(); } catch (err) {}
+      document.body.removeChild(t);
+    };
+    copy.addEventListener('click', function () {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(EMAIL).then(done, fallback);
+      } else {
+        fallback();
+      }
+    });
+  }
+})();
+</script>
 </body>
 </html>
